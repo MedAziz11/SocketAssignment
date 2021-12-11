@@ -1,6 +1,7 @@
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class Server {
 
@@ -20,6 +21,12 @@ public class Server {
         PrintWriter outServer = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socClient.getOutputStream())), true);
 
         // todo: implement the scenario
+
+        String in =inServer.readLine();
+        String res = in.replaceAll("[aeiouyAEIOUY]", "");
+
+        outServer.println(res);
+
 
         // Close in / out
         inServer.close();

@@ -22,6 +22,13 @@ public class Client {
 
         // todo: implement the scenario
 
+        Scanner obj = new Scanner(System.in);
+        String s = obj.nextLine();
+        outClient.println(s);
+
+        String res = inClient.readLine();
+        System.out.println(res);
+
         //close in / out
         inClient.close();
         outClient.close();
